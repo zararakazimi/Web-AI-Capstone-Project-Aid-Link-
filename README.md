@@ -135,7 +135,7 @@ Add screenshots of the following pages after deployment:
 Deployment Link:
 
 ```
-https://your-netlify-site.netlify.app
+https://tourmaline-mooncake-fbb62a.netlify.app/
 ```
 
 (Add your deployment link after publishing.)
