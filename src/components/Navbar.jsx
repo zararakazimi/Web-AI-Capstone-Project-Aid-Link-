@@ -1,0 +1,62 @@
+import { Link } from "react-router-dom";
+import logo from "../assets/aidlink-logo.png";
+
+function Navbar() {
+  return (
+    <nav className="bg-gradient-to-r from-blue-500 to-blue-700 shadow-lg">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
+
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src={logo}
+            alt="AidLink Logo"
+            className="h-20 w-20 object-contain"
+          />
+
+
+          <h1 className="text-xl font-bold text-white">
+            AidLink
+          </h1>
+        </Link>
+
+
+        {/* Navigation */}
+        <div className="flex items-center gap-5 text-sm font-medium">
+
+          <Link 
+            to="/"
+            className="text-white hover:text-yellow-300 transition duration-300"
+          >
+            Home
+          </Link>
+
+          <Link
+            to="/organizations"
+            className="text-white hover:text-yellow-300 transition duration-300"
+          >
+            Organizations
+          </Link>
+
+          <Link
+            to="/request-help"
+            className="text-white hover:text-yellow-300 transition duration-300"
+          >
+            Request Help
+          </Link>
+
+          <Link
+            to="/saved"
+            className="text-white hover:text-yellow-300 transition duration-300"
+          >
+            Saved
+          </Link>
+
+        </div>
+
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;
