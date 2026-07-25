@@ -115,8 +115,9 @@ Always return exactly this structure:
 
     return response.data.choices[0].message.content;
   } catch (error) {
+    
     console.error("Status:", error.response?.status);
-    console.error("Response:", error.response?.data);
+    console.error("Response:", JSON.stringify(error.response?.data, null, 2));
 
     return `
 ## Needs Assessment
