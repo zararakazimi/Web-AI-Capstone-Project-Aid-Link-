@@ -10,11 +10,25 @@ function Organizations() {
 
   // Create category list from all categories
   const categories = [
-    "All",
-    ...new Set(organizations.flatMap((org) => org.categories)),
-  ];
+  "All",
+  "Healthcare",
+  "Education",
+  "Food Assistance",
+  "Shelter",
+  "Emergency Relief",
+  "Protection",
+  "Nutrition",
+  "Legal Aid",
+  "Women's Health",
+];
+
+console.log(
+  [...new Set(organizations.flatMap(org => org.categories))].sort()
+);
+
 
   console.log(organizations[0]);
+ 
 
   const filteredOrganizations = organizations.filter((organization) => {
   const search = searchTerm.trim().toLowerCase();

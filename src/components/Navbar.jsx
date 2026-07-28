@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/aidlink-logo.png";
+import logo from "../assets/newlogo.png";
 
 function Navbar() {
   return (
-    <nav className="bg-gradient-to-r from-blue-500 to-blue-700 shadow-lg">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-600 to-blue-800 shadow-xl">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
 
         {/* Logo */}

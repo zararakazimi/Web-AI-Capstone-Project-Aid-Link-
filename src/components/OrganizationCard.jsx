@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FiMapPin, FiGlobe, FiHeart } from "react-icons/fi";
 
 function OrganizationCard({ organization }) {
   const [saved, setSaved] = useState(false);
@@ -55,33 +56,37 @@ function OrganizationCard({ organization }) {
       </p>
 
       {/* Location */}
-      <div className="flex items-center text-gray-500 mb-5">
-        <span className="mr-2">📍</span>
+      <div className="flex items-center text-gray-600 mb-5">
+        <FiMapPin className="text-blue-600 mr-2 text-lg" />
         <span>{organization.location}</span>
       </div>
 
       {/* Buttons */}
       <div className="flex gap-3">
-        <a
-          href={organization.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
-        >
-          Visit Website
-        </a>
 
-        <button
-          onClick={handleSave}
-          className={`px-5 py-2 rounded-lg font-semibold transition ${
-            saved
-              ? "bg-green-500 hover:bg-green-600 text-white"
-              : "bg-green-300 hover:bg-green-400 text-white"
-          }`}
-        >
-          {saved ? "Saved" : "Save"}
-        </button>
-      </div>
+  <a
+    href={organization.website}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex-1 flex items-center justify-center gap-2 bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
+  >
+    <FiGlobe />
+    Visit Website
+  </a>
+
+  <button
+    onClick={handleSave}
+    className={`flex items-center gap-2 px-5 py-2 rounded-lg font-semibold transition ${
+      saved
+        ? "bg-green-500 hover:bg-green-600 text-white"
+        : "bg-green-300 hover:bg-green-400 text-white"
+    }`}
+  >
+    <FiHeart />
+    {saved ? "Saved" : "Save"}
+  </button>
+
+</div>
     </div>
   );
 }
