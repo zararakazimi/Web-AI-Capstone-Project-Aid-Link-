@@ -15,9 +15,7 @@ function Navbar() {
           />
 
 
-          <h1 className="text-xl font-bold text-white">
-            AidLink
-          </h1>
+         
         </Link>
 
 
