@@ -9,7 +9,7 @@ function Results() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-100">
         <div className="text-center bg-white p-10 rounded-3xl shadow-xl">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          <h1 className="text-3xl font-bold text-blue-900 mb-4">
             No Analysis Available
           </h1>
 
@@ -69,11 +69,11 @@ function Results() {
     <div className="min-h-screen bg-slate-100 py-10 px-5">
       <div className="max-w-7xl mx-auto">
                 {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-700 via-cyan-600 to-teal-600 rounded-3xl shadow-2xl text-white p-10 mb-10">
+        <div className="bg-gradient-to-r from-blue-900 via-blue-700 to-sky-600 to-teal-600 rounded-3xl shadow-2xl text-white p-10 mb-10">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                🤝 Your Personalized Support Plan
+                Your Personalized Support Plan
               </h1>
 
               <p className="text-lg text-blue-100 leading-8 max-w-3xl">
@@ -99,7 +99,7 @@ function Results() {
         </div>
 
         {/* Needs Assessment */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 border-l-8 border-blue-600 mb-10">
+        <div className="bg-white rounded-3xl shadow-xl p-8 border-l-8 border-blue-800 mb-10">
 
           <div className="flex items-center mb-6">
             <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center text-3xl">
@@ -107,7 +107,7 @@ function Results() {
             </div>
 
             <div className="ml-4">
-              <h2 className="text-3xl font-bold text-blue-700">
+              <h2 className="text-3xl font-bold text-blue-900">
                 Understanding Your Situation
               </h2>
 
@@ -134,7 +134,7 @@ function Results() {
             </div>
 
             <div className="ml-4">
-              <h2 className="text-3xl font-bold text-green-700">
+              <h2 className="text-3xl font-bold text-blue-900">
                 Recommended Organizations
               </h2>
 
@@ -163,7 +163,7 @@ function Results() {
                 🔍
               </div>
 
-              <h3 className="text-2xl font-bold text-yellow-700 mb-4">
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">
                 No Matching Organizations Found
               </h3>
 
@@ -225,7 +225,7 @@ function Results() {
 
                     <div>
 
-                      <h3 className="text-xl font-bold text-orange-600 mb-2">
+                      <h3 className="text-xl font-bold text-blue-900 mb-2">
                         Step {index + 1}
                       </h3>
 
@@ -279,7 +279,7 @@ function Results() {
 
           <Link
             to="/request-help"
-            className="bg-blue-600 hover:bg-blue-700 text-white text-center px-8 py-4 rounded-xl font-bold transition duration-300 shadow-lg"
+            className="bg-blue-800 hover:bg-sky-700 text-white text-center px-8 py-4 rounded-xl font-bold transition duration-300 shadow-lg"
           >
             🔄 Analyze Another Situation
           </Link>

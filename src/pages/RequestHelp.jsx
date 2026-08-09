@@ -46,13 +46,22 @@ function RequestHelp() {
 
   return (
     <div className="min-h-screen bg-slate-50 py-10 px-6">
-      <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+      <div className="
+        max-w-3xl
+        mx-auto
+        bg-white
+        rounded-2xl
+        shadow-lg
+        border
+        border-blue-100
+        p-8
+        ">
 
-        <h1 className="text-4xl font-bold text-blue-700 text-center mb-3">
+        <h1 className="text-4xl font-bold text-blue-900 text-center mb-3">
           Request Help
         </h1>
 
-        <p className="text-center text-gray-600 mb-8">
+        <p className="text-center text-slat-600 mb-8">
           Tell us about your situation and AidLink will recommend the most suitable organizations.
         </p>
 
@@ -69,8 +78,16 @@ function RequestHelp() {
               value={formData.situation}
               onChange={handleChange}
               placeholder="Example: I lost my job and need food assistance for my family."
-              className="w-full border border-gray-300 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
+              className="
+                w-full
+                border
+                border-blue-100
+                rounded-xl
+                p-4
+                focus:outline-none
+                focus:ring-2
+                focus:ring-sky-600
+                "
             />
           </div>
 
@@ -83,8 +100,16 @@ function RequestHelp() {
               name="category"
               value={formData.category}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
+              className="
+                w-full
+                border
+                border-blue-100
+                rounded-xl
+                p-3
+                focus:outline-none
+                focus:ring-2
+                focus:ring-sky-600
+                "
             >
               <option value="">Select Category</option>
               <option>Healthcare</option>
@@ -101,22 +126,32 @@ function RequestHelp() {
             disabled={loading}
             className={`w-full py-3 rounded-xl font-semibold text-white transition ${
               loading
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-blue-600 hover:bg-blue-700"
+                ? "bg-slate-400 cursor-not-allowed"
+                : "bg-blue-800 hover:bg-sky-700"
             }`}
+            
           >
             {loading ? "🤖 Analyzing..." : "Analyze with AI"}
           </button>
 
           {loading && (
-            <div className="mt-6 bg-blue-50 border border-blue-200 rounded-2xl p-6 text-center animate-pulse">
+            <div className="
+                mt-6
+                bg-sky-50
+                border
+                border-sky-200
+                rounded-2xl
+                p-6
+                text-center
+                animate-pulse
+                ">
               <div className="text-5xl mb-3">🤖</div>
 
-              <h3 className="text-xl font-bold text-blue-700">
+              <h3 className="text-xl font-bold text-blue-900">
                 AidLink AI is analyzing your situation...
               </h3>
 
-              <p className="text-gray-600 mt-2">
+              <p className="text-slate-600 mt-2">
                 This usually takes a few seconds.
               </p>
             </div>

@@ -3,7 +3,7 @@ import logo from "../assets/newlogo.png";
 
 function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-600 to-blue-800 shadow-xl">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-blue-900 shadow-xl">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
 
         {/* Logo */}
@@ -13,8 +13,6 @@ function Navbar() {
             alt="AidLink Logo"
             className="h-20 w-20 object-contain"
           />
-
-
          
         </Link>
 
@@ -24,28 +22,28 @@ function Navbar() {
 
           <Link 
             to="/"
-            className="text-white hover:text-yellow-300 transition duration-300"
+            className="text-white hover:text-blue-200 transition duration-300"
           >
             Home
           </Link>
 
           <Link
             to="/organizations"
-            className="text-white hover:text-yellow-300 transition duration-300"
+            className="text-white hover:text-blue-200 transition duration-300"
           >
             Organizations
           </Link>
 
           <Link
             to="/request-help"
-            className="text-white hover:text-yellow-300 transition duration-300"
+            className="text-white hover:hover:text-blue-200 transition duration-300"
           >
             Request Help
           </Link>
 
           <Link
             to="/saved"
-            className="text-white hover:text-yellow-300 transition duration-300"
+            className="text-white hover:text-blue-200 transition duration-300"
           >
             Saved
           </Link>
