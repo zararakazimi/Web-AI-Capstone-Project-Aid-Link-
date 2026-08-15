@@ -17,8 +17,6 @@ function Organizations() {
   "Shelter",
   "Emergency Relief",
   "Protection",
-  "Nutrition",
-  "Legal Aid",
   "Women's Health",
 ];
 
@@ -68,16 +66,18 @@ console.log(
           food assistance, shelter, legal aid, and humanitarian support.
         </p>
 
-        <SearchBar
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
-        />
+        <div className="grid md:grid-cols-2 gap-6 mb-10">
+          <SearchBar
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+          />
 
-        <CategoryFilter
-          categories={categories}
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-        />
+          <CategoryFilter
+            categories={categories}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
+        </div>
 
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {filteredOrganizations.length > 0 ? (

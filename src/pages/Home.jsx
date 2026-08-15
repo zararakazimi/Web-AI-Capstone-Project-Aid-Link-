@@ -70,12 +70,9 @@ useEffect(() => {
     </p>
 
     <p className="max-w-4xl text-lg md:text-xl leading-8 mb-10">
-      AidLink helps individuals and families connect with trusted
-      humanitarian organizations through Artificial Intelligence.
-      Users describe their situation, receive personalized support
+      With AidLink you can describe your situation and receive personalized support
       recommendations, and discover organizations that can provide
-      healthcare, education, food assistance, shelter, employment,
-      legal aid, and emergency relief.
+      healthcare, education, food assistance, shelter and employment.
     </p>
 
     <div className="flex flex-wrap justify-center gap-5">

@@ -1,6 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import organizationsData from "../data/organizations";
 import OrganizationCard from "../components/OrganizationCard";
+import { FiLoader } from "react-icons/fi";
+import { FiCheckCircle } from "react-icons/fi";
+import { FiSearch } from "react-icons/fi";
 
 function Results() {
   const { state } = useLocation();
@@ -77,15 +80,14 @@ function Results() {
               </h1>
 
               <p className="text-lg text-blue-100 leading-8 max-w-3xl">
-                AidLink AI carefully analyzed your situation and identified the
-                support services that best match your needs. Review the
-                recommendations below and explore organizations that may be able
-                to assist you.
+                You are not alone. AidLink AI found support options that may help you. Explore the recommendations below and take your next step.
               </p>
             </div>
 
             <div className="bg-white/20 backdrop-blur-sm rounded-2xl px-8 py-6 text-center">
-              <div className="text-5xl mb-2">🤖</div>
+              <div className="flex justify-center mb-2">
+                <FiCheckCircle className="text-5xl text-white" />
+              </div>
 
               <h3 className="font-bold text-xl">
                 AI Analysis Complete
@@ -102,9 +104,7 @@ function Results() {
         <div className="bg-white rounded-3xl shadow-xl p-8 border-l-8 border-blue-800 mb-10">
 
           <div className="flex items-center mb-6">
-            <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center text-3xl">
-              📋
-            </div>
+            
 
             <div className="ml-4">
               <h2 className="text-3xl font-bold text-blue-900">
@@ -129,9 +129,7 @@ function Results() {
         <div className="mb-10">
 
           <div className="flex items-center mb-6">
-            <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center text-3xl">
-              🌍
-            </div>
+            
 
             <div className="ml-4">
               <h2 className="text-3xl font-bold text-blue-900">
@@ -159,8 +157,8 @@ function Results() {
 
             <div className="bg-yellow-50 border border-yellow-300 rounded-3xl p-10 text-center">
 
-              <div className="text-6xl mb-4">
-                🔍
+              <div className="flex justify-center mb-4">
+                <FiSearch className="text-6xl text-blue-700" />
               </div>
 
               <h3 className="text-2xl font-bold text-blue-900 mb-4">
@@ -190,12 +188,10 @@ function Results() {
         <div className="mb-10">
 
           <div className="flex items-center mb-6">
-            <div className="w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center text-3xl">
-              ✅
-            </div>
+            
 
             <div className="ml-4">
-              <h2 className="text-3xl font-bold text-orange-600">
+              <h2 className="text-3xl font-bold text-blue-800">
                 Your Action Plan
               </h2>
 
@@ -214,12 +210,12 @@ function Results() {
 
                 <div
                   key={index}
-                  className="bg-white rounded-2xl shadow-lg p-6 border-l-8 border-orange-500 hover:shadow-xl transition"
+                  className="bg-white rounded-2xl shadow-lg p-6 border-l-8 border-sky-500 hover:shadow-xl transition"
                 >
 
                   <div className="flex items-start">
 
-                    <div className="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg mr-5 flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-sky-900 text-white flex items-center justify-center font-bold text-lg mr-5 flex-shrink-0">
                       {index + 1}
                     </div>
 
@@ -230,7 +226,7 @@ function Results() {
                       </h3>
 
                       <p className="text-gray-700 leading-8">
-                        {step.replace(/^\d+\./, "").trim()}
+                        {step.replace(/^\d+\./, "").replace(/\*\*/g, "").trim()}
                       </p>
 
                     </div>
@@ -249,9 +245,7 @@ function Results() {
         <div className="bg-blue-50 rounded-3xl shadow-lg p-8 mb-10 border border-blue-100">
 
           <div className="flex items-center mb-5">
-            <div className="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center text-3xl">
-              💡
-            </div>
+            
 
             <div className="ml-4">
               <h2 className="text-3xl font-bold text-blue-700">
@@ -281,14 +275,14 @@ function Results() {
             to="/request-help"
             className="bg-blue-800 hover:bg-sky-700 text-white text-center px-8 py-4 rounded-xl font-bold transition duration-300 shadow-lg"
           >
-            🔄 Analyze Another Situation
+            Analyze Another Situation
           </Link>
 
           <Link
             to="/organizations"
-            className="bg-green-600 hover:bg-green-700 text-white text-center px-8 py-4 rounded-xl font-bold transition duration-300 shadow-lg"
+            className="bg-blue-800 hover:bg-sky-700 text-white text-center px-8 py-4 rounded-xl font-bold transition duration-300 shadow-lg"
           >
-            🌍 Browse Organizations
+            Browse Organizations
           </Link>
 
         </div>

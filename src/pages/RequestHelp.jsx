@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { analyzeSituation } from "../services/aiService";
+import { FiLoader } from "react-icons/fi";
 
 function RequestHelp() {
   const [formData, setFormData] = useState({
@@ -121,17 +122,25 @@ function RequestHelp() {
             </select>
           </div>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className={`w-full py-3 rounded-xl font-semibold text-white transition ${
-              loading
-                ? "bg-slate-400 cursor-not-allowed"
-                : "bg-blue-800 hover:bg-sky-700"
+          <button 
+            type="submit" 
+            disabled={loading} 
+            className={`w-full py-3 rounded-xl font-semibold text-white transition flex items-center justify-center gap-2 ${
+              loading 
+                ? "bg-slate-400 cursor-not-allowed" 
+                : "bg-blue-800 hover:bg-sky-700" 
             }`}
-            
           >
-            {loading ? "🤖 Analyzing..." : "Analyze with AI"}
+            {loading ? (
+              <>
+                <FiLoader className="animate-spin text-lg" />
+                Analyzing...
+              </>
+            ) : (
+              <>
+                Analyze with AI
+              </>
+            )}
           </button>
 
           {loading && (
@@ -145,7 +154,9 @@ function RequestHelp() {
                 text-center
                 animate-pulse
                 ">
-              <div className="text-5xl mb-3">🤖</div>
+              <div className="flex justify-center mb-4">
+                <FiLoader className="text-5xl text-blue-700 animate-spin" />
+              </div>
 
               <h3 className="text-xl font-bold text-blue-900">
                 AidLink AI is analyzing your situation...

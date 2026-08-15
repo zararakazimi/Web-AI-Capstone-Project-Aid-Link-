@@ -4,33 +4,25 @@ function CategoryFilter({
   setSelectedCategory,
 }) {
   return (
-    <section className="mb-10">
+    <div className="w-full">
+      <label className="block mb-2 font-semibold text-blue-900">
+        Support Category
+      </label>
 
-      <h3 className="text-center text-lg font-semibold text-gray-700 mb-5">
-        Browse by Category
-      </h3>
-
-      <div className="flex flex-wrap justify-center gap-4">
-
+      <select
+        value={selectedCategory}
+        onChange={(e) => setSelectedCategory(e.target.value)}
+        className="
+          w-full pl-12 pr-4 py-3 border border-gray-300 text-gray-400 text-xl rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500
+        "
+      >
         {categories.map((category) => (
-
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-sm border ${
-              selectedCategory === category
-                ? "bg-blue-600 text-white border-blue-600 shadow-lg scale-105"
-                : "bg-white text-gray-700 border-gray-200 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700 hover:shadow-md"
-            }`}
-          >
+          <option key={category} value={category}>
             {category}
-          </button>
-
+          </option>
         ))}
-
-      </div>
-
-    </section>
+      </select>
+    </div>
   );
 }
 
